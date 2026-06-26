@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hackathon Landing Page — Exported from UXMagic Copilot">
+    <title>Hackathon Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Poppins:wght@100..900&amp;family=Fira+Code:wght@300..700&amp;family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style type="text/tailwindcss">
+      @import "tailwindcss";
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-tertiary: var(--tertiary);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-destructive: var(--destructive);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --radius-sm: calc(var(--radius) - 4px);
+        --radius-md: calc(var(--radius) - 2px);
+        --radius-lg: var(--radius);
+        --font-family-sans: var(--font-sans);
+        --font-family-heading: var(--font-heading);
+      }
+      :root {
+        --destructive: #ef4444;
+        --secondary-foreground: #F1F6F4;
+        --background: #172B36;
+        --font-sans: Inter, sans-serif;
+        --primary: #FFC801;
+        --secondary: #114C5A;
+        --input: #2A4B5A;
+        --muted-foreground: #D9E8E2;
+        --radius: 0.75rem;
+        --accent: #FF9932;
+        --border: #2A4B5A;
+        --ring: #FFC801;
+        --font-heading: JetBrains Mono, monospace;
+        --card: #114C5A;
+        --foreground: #F1F6F4;
+        --muted: #114C5A;
+        --card-foreground: #F1F6F4;
+        --primary-foreground: #172B36;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div data-page="hackathon-landing-page">
+
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<div class="min-h-screen w-full bg-background text-foreground font-sans flex flex-col relative overflow-x-hidden">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                    <iconify-icon icon="lucide:zap" class="text-primary-foreground text-xl"></iconify-icon>
+                </div>
+                <span class="font-heading font-bold text-xl tracking-tight">QuantumAI</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
+                <a href="#features" class="hover:text-primary transition-colors">Features</a>
+                <a href="#workflow" class="hover:text-primary transition-colors">Workflow</a>
+                <a href="#pricing" class="hover:text-primary transition-colors">Pricing</a>
+                <a href="#testimonials" class="hover:text-primary transition-colors">Testimonials</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="hidden sm:block text-sm font-medium hover:text-primary transition-colors">Sign In</button>
+                <button class="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity">Get Started</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2 space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary border border-border text-[10px] font-heading font-bold tracking-widest text-primary uppercase">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                    Enterprise AI Automation
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-heading font-extrabold leading-[1.1]">
+                    Automate <br> Everything <br> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient-x">with AI Agents</span>
+                </h1>
+                <p class="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    The intelligent layer for your business. Deploy autonomous agents that handle data, integration, and complex workflows with zero friction.
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                    <button class="px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold hover:shadow-[0_0_20px_rgba(255,200,1,0.3)] transition-all transform hover:-translate-y-0.5">Start Building Free</button>
+                    <button class="px-8 py-4 rounded-xl bg-card border border-border hover:bg-secondary transition-all flex items-center gap-2 group">
+                        <iconify-icon icon="lucide:play" class="text-primary group-hover:scale-110 transition-transform"></iconify-icon>
+                        Watch Product Tour
+                    </button>
+                </div>
+                <div class="flex items-center justify-center lg:justify-start gap-4 pt-6">
+                    <div class="flex -space-x-3">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-8 h-8 rounded-full border-2 border-background" alt="User">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-8 h-8 rounded-full border-2 border-background" alt="User">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" class="w-8 h-8 rounded-full border-2 border-background" alt="User">
+                    </div>
+                    <p class="text-xs text-muted-foreground font-medium">Trusted by <span class="text-foreground">500+ Enterprise Teams</span></p>
+                </div>
+            </div>
+
+            <!-- Hero Graphic -->
+            <div class="lg:w-1/2 relative w-full max-w-xl mx-auto">
+                <div class="relative aspect-[4/3] bg-card/40 border border-border rounded-2xl p-6 shadow-2xl backdrop-blur-sm overflow-hidden group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex gap-1.5">
+                            <div class="w-3 h-3 rounded-full bg-destructive/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-accent/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-primary/50"></div>
+                        </div>
+                        <div class="text-[10px] font-heading text-muted-foreground bg-secondary px-2 py-0.5 rounded">LIVE NEURAL PROCESSING</div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="p-4 bg-background/60 border border-border rounded-xl flex items-center justify-between">
+                            <div class="space-y-1">
+                                <div class="text-[10px] text-muted-foreground uppercase tracking-widest">Active Pipeline</div>
+                                <div class="text-sm font-heading font-bold">Data Extraction &amp; Sync</div>
+                            </div>
+                            <div class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold">PROCESSING</div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-background/60 border border-border rounded-xl">
+                                <div class="text-[10px] text-muted-foreground mb-1 uppercase tracking-widest">Efficiency</div>
+                                <div class="text-xl font-heading font-bold text-primary">99.98%</div>
+                                <div class="w-full bg-secondary h-1 mt-2 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-4/5 rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-background/60 border border-border rounded-xl">
+                                <div class="text-[10px] text-muted-foreground mb-1 uppercase tracking-widest">Latency</div>
+                                <div class="text-xl font-heading font-bold text-accent">14ms</div>
+                                <div class="w-full bg-secondary h-1 mt-2 rounded-full overflow-hidden">
+                                    <div class="bg-accent h-full w-1/3 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="h-24 bg-background/60 border border-border rounded-xl p-4 flex items-end gap-1">
+                            <div class="flex-1 bg-primary/20 h-8 rounded-t animate-pulse"></div>
+                            <div class="flex-1 bg-primary/40 h-16 rounded-t"></div>
+                            <div class="flex-1 bg-primary/20 h-12 rounded-t animate-pulse"></div>
+                            <div class="flex-1 bg-primary/60 h-20 rounded-t"></div>
+                            <div class="flex-1 bg-primary/30 h-14 rounded-t animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logo Strip -->
+        <section class="py-12 border-y border-border bg-secondary/20">
+            <div class="max-w-7xl mx-auto px-6">
+                <p class="text-center text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-[0.2em] mb-10">The Infrastructure of Choice For</p>
+                <div class="flex flex-wrap justify-center gap-x-16 gap-y-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                    <span class="text-xl font-heading font-bold">MICROSOFT</span>
+                    <span class="text-xl font-heading font-bold">GOOGLE</span>
+                    <span class="text-xl font-heading font-bold">AMAZON</span>
+                    <span class="text-xl font-heading font-bold">OPENAI</span>
+                    <span class="text-xl font-heading font-bold">META</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section (Bento Grid to Accordion) -->
+        <section id="features" class="py-24 px-6 max-w-7xl mx-auto" x-data="{ active: 1 }">
+            <div class="text-center lg:text-left mb-16 space-y-4">
+                <div class="text-primary font-heading font-bold text-xs tracking-widest uppercase">Core Capabilities</div>
+                <h2 class="text-4xl md:text-5xl font-heading font-extrabold">Designed for the <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Intelligence Era</span></h2>
+                <p class="text-muted-foreground max-w-2xl">A complete ecosystem of AI-first tools built to handle the most complex enterprise automation requirements with ease.</p>
+            </div>
+
+            <!-- Desktop Bento Grid (Hidden on Mobile) -->
+            <div class="hidden md:grid grid-cols-3 grid-rows-2 gap-6 h-[600px]">
+                <!-- Item 1 (Large) -->
+                <div class="col-span-2 row-span-1 bg-card border rounded-2xl p-8 cursor-pointer transition-all duration-500 relative overflow-hidden group" :class="active === 1 ? 'border-primary ring-1 ring-primary/20 shadow-[0_0_40px_rgba(255,200,1,0.1)]' : 'border-border hover:border-muted-foreground'" @click="active = 1">
+                    <div class="relative z-10 h-full flex flex-col">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <iconify-icon icon="lucide:brain-circuit" class="text-primary text-2xl"></iconify-icon>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold mb-4">Cognitive Automation</h3>
+                        <p class="text-muted-foreground leading-relaxed max-w-md">Go beyond simple "if-this-then-that". Our agents use reasoning to handle exceptions, categorize complex data, and make decisions just like your best employees.</p>
+                        <div class="mt-auto flex gap-3">
+                            <span class="px-2 py-1 bg-secondary rounded text-[10px] font-heading font-bold text-muted-foreground">LLM-NATIVE</span>
+                            <span class="px-2 py-1 bg-secondary rounded text-[10px] font-heading font-bold text-muted-foreground">SELF-CORRECTING</span>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="col-span-1 row-span-1 bg-card border rounded-2xl p-8 cursor-pointer transition-all duration-500 group" :class="active === 2 ? 'border-primary ring-1 ring-primary/20' : 'border-border hover:border-muted-foreground'" @click="active = 2">
+                    <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="lucide:shield-check" class="text-accent text-2xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Fortress-Grade Security</h3>
+                    <p class="text-sm text-muted-foreground leading-relaxed">SOC2 Type II, GDPR, and HIPAA compliant. Your data is encrypted at rest and in transit with zero-knowledge architecture.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="col-span-1 row-span-1 bg-card border rounded-2xl p-8 cursor-pointer transition-all duration-500 group" :class="active === 3 ? 'border-primary ring-1 ring-primary/20' : 'border-border hover:border-muted-foreground'" @click="active = 3">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="lucide:refresh-cw" class="text-primary text-2xl"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-3">Omni-Channel Sync</h3>
+                    <p class="text-sm text-muted-foreground leading-relaxed">Connect any data source. Whether it's a legacy SQL database, a real-time API stream, or unstructured PDF files.</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="col-span-2 row-span-1 bg-card border rounded-2xl p-8 cursor-pointer transition-all duration-500 group overflow-hidden relative" :class="active === 4 ? 'border-primary ring-1 ring-primary/20' : 'border-border hover:border-muted-foreground'" @click="active = 4">
+                    <div class="flex gap-8 items-center h-full">
+                        <div class="flex-1">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <iconify-icon icon="lucide:trending-up" class="text-accent text-2xl"></iconify-icon>
+                            </div>
+                            <h3 class="text-2xl font-heading font-bold mb-4">Predictive Analytics</h3>
+                            <p class="text-muted-foreground leading-relaxed">Real-time insights into token usage, cost-savings, and automation ROI. Predict bottlenecks before they happen.</p>
+                        </div>
+                        <div class="flex-1 h-full bg-secondary/30 rounded-xl border border-border/50 p-4 flex flex-col gap-2">
+                            <div class="h-2 w-3/4 bg-primary/20 rounded"></div>
+                            <div class="h-2 w-1/2 bg-accent/20 rounded"></div>
+                            <div class="h-2 w-2/3 bg-primary/20 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Accordion (Hidden on Desktop) -->
+            <div class="md:hidden flex flex-col gap-4">
+                <!-- Item 1 -->
+                <div class="bg-card border rounded-xl overflow-hidden transition-all duration-300" :class="active === 1 ? 'border-primary' : 'border-border'">
+                    <button class="w-full text-left p-6 flex justify-between items-center" @click="active = 1">
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:brain-circuit" class="text-primary text-xl"></iconify-icon>
+                            <span class="font-heading font-bold">Cognitive Automation</span>
+                        </div>
+                        <iconify-icon icon="lucide:chevron-down" class="transition-transform duration-300" :class="active === 1 ? 'rotate-180' : ''"></iconify-icon>
+                    </button>
+                    <div class="px-6 pb-6 text-sm text-muted-foreground leading-relaxed" x-show="active === 1" x-collapse="">
+                        Go beyond simple "if-this-then-that". Our agents use reasoning to handle exceptions, categorize complex data, and make decisions just like your best employees.
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-card border rounded-xl overflow-hidden transition-all duration-300" :class="active === 2 ? 'border-primary' : 'border-border'">
+                    <button class="w-full text-left p-6 flex justify-between items-center" @click="active = 2">
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:shield-check" class="text-accent text-xl"></iconify-icon>
+                            <span class="font-heading font-bold">Fortress-Grade Security</span>
+                        </div>
+                        <iconify-icon icon="lucide:chevron-down" class="transition-transform duration-300" :class="active === 2 ? 'rotate-180' : ''"></iconify-icon>
+                    </button>
+                    <div class="px-6 pb-6 text-sm text-muted-foreground leading-relaxed" x-show="active === 2" x-collapse="">
+                        SOC2 Type II, GDPR, and HIPAA compliant. Your data is encrypted at rest and in transit with zero-knowledge architecture.
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-card border rounded-xl overflow-hidden transition-all duration-300" :class="active === 3 ? 'border-primary' : 'border-border'">
+                    <button class="w-full text-left p-6 flex justify-between items-center" @click="active = 3">
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:refresh-cw" class="text-primary text-xl"></iconify-icon>
+                            <span class="font-heading font-bold">Omni-Channel Sync</span>
+                        </div>
+                        <iconify-icon icon="lucide:chevron-down" class="transition-transform duration-300" :class="active === 3 ? 'rotate-180' : ''"></iconify-icon>
+                    </button>
+                    <div class="px-6 pb-6 text-sm text-muted-foreground leading-relaxed" x-show="active === 3" x-collapse="">
+                        Connect any data source. Whether it's a legacy SQL database, a real-time API stream, or unstructured PDF files.
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="bg-card border rounded-xl overflow-hidden transition-all duration-300" :class="active === 4 ? 'border-primary' : 'border-border'">
+                    <button class="w-full text-left p-6 flex justify-between items-center" @click="active = 4">
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="lucide:trending-up" class="text-accent text-xl"></iconify-icon>
+                            <span class="font-heading font-bold">Predictive Analytics</span>
+                        </div>
+                        <iconify-icon icon="lucide:chevron-down" class="transition-transform duration-300" :class="active === 4 ? 'rotate-180' : ''"></iconify-icon>
+                    </button>
+                    <div class="px-6 pb-6 text-sm text-muted-foreground leading-relaxed" x-show="active === 4" x-collapse="">
+                        Real-time insights into token usage, cost-savings, and automation ROI. Predict bottlenecks before they happen.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section (Local State) -->
+        <section id="pricing" class="py-24 px-6 bg-secondary/10 overflow-hidden" x-data="{
+            currency: 'USD',
+            billing: 'monthly',
+            rates: { USD: 1, INR: 83 },
+            tiers: {
+                starter: { base: 29 },
+                pro: { base: 99 },
+                enterprise: { base: 299 }
+            },
+            formatPrice(base) {
+                let p = base;
+                if (this.billing === 'annual') p = p * 0.8;
+                p = p * this.rates[this.currency];
+                let val = Math.floor(p);
+                return this.currency === 'USD' ? '$' + val : '₹' + val.toLocaleString();
+            }
+        }">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 space-y-6">
+                    <div class="text-accent font-heading font-bold text-xs tracking-widest uppercase">Pricing Plans</div>
+                    <h2 class="text-4xl md:text-5xl font-heading font-extrabold">Scale with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Confidence</span></h2>
+                    
+                    <!-- Pricing Controls -->
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4">
+                        <!-- Billing Toggle -->
+                        <div class="flex items-center gap-3 bg-card p-1.5 rounded-full border border-border shadow-inner">
+                            <button class="px-5 py-2 rounded-full text-xs font-heading font-bold transition-all" :class="billing === 'monthly' ? 'bg-primary text-primary-foreground shadow-lg' : 'text-muted-foreground hover:text-foreground'" @click="billing = 'monthly'">MONTHLY</button>
+                            <button class="px-5 py-2 rounded-full text-xs font-heading font-bold transition-all relative" :class="billing === 'annual' ? 'bg-primary text-primary-foreground shadow-lg' : 'text-muted-foreground hover:text-foreground'" @click="billing = 'annual'">
+                                ANNUALLY
+                                <span class="absolute -top-4 -right-2 bg-accent text-[8px] text-white px-1.5 py-0.5 rounded-full">-20%</span>
+                            </button>
+                        </div>
+                        <!-- Currency Toggle -->
+                        <div class="flex items-center gap-2 bg-card p-1.5 rounded-full border border-border">
+                             <button class="w-10 h-10 rounded-full text-xs font-heading font-bold transition-all flex items-center justify-center" :class="currency === 'USD' ? 'bg-secondary text-primary' : 'text-muted-foreground'" @click="currency = 'USD'">USD</button>
+                            <button class="w-10 h-10 rounded-full text-xs font-heading font-bold transition-all flex items-center justify-center" :class="currency === 'INR' ? 'bg-secondary text-primary' : 'text-muted-foreground'" @click="currency = 'INR'">INR</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Starter -->
+                    <div class="bg-card border border-border rounded-2xl p-10 flex flex-col group hover:border-primary/50 transition-colors">
+                        <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest mb-2">For Individuals</div>
+                        <h3 class="text-2xl font-heading font-bold mb-6">Starter</h3>
+                        <div class="flex items-baseline gap-1 mb-8">
+                            <span class="text-5xl font-heading font-extrabold" x-text="formatPrice(tiers.starter.base)"></span>
+                            <span class="text-muted-foreground text-sm">/mo</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-1">
+                            <li class="flex items-center gap-3 text-sm text-muted-foreground">
+                                <iconify-icon icon="lucide:check-circle" class="text-primary"></iconify-icon>
+                                5,000 Tasks per month
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-muted-foreground">
+                                <iconify-icon icon="lucide:check-circle" class="text-primary"></iconify-icon>
+                                3 Parallel AI Agents
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-muted-foreground">
+                                <iconify-icon icon="lucide:check-circle" class="text-primary"></iconify-icon>
+                                Standard API Access
+                            </li>
+                        </ul>
+                        <button class="w-full py-4 rounded-xl border border-border hover:bg-secondary transition-all font-heading font-bold text-xs uppercase tracking-widest">Get Started</button>
+                    </div>
+
+                    <!-- Professional -->
+                    <div class="bg-secondary/40 border-2 border-primary rounded-2xl p-10 flex flex-col relative shadow-[0_0_50px_rgba(255,200,1,0.1)] transform md:-translate-y-4">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-heading font-bold px-4 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg">Most Popular</div>
+                        <div class="text-[10px] font-heading font-bold text-primary uppercase tracking-widest mb-2">For Scaling Teams</div>
+                        <h3 class="text-2xl font-heading font-bold mb-6">Professional</h3>
+                        <div class="flex items-baseline gap-1 mb-8">
+                            <span class="text-5xl font-heading font-extrabold" x-text="formatPrice(tiers.pro.base)"></span>
+                            <span class="text-muted-foreground text-sm">/mo</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-1">
+                            <li class="flex items-center gap-3 text-sm">
+                                <iconify-icon icon="lucide:check-circle" class="text-primary"></iconify-icon>
+                                50,000 Tasks per month
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <iconify-icon icon="lucide:check-circle" class="text-primary"></iconify-icon>
+                                Unlimited AI Agents
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <iconify-icon icon="lucide:check-circle" class="text-primary"></iconify-icon>
+                                Priority 24/7 Support
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <iconify-icon icon="lucide:check-circle" class="text-primary"></iconify-icon>
+                                Advanced Analytics Suite
+                            </li>
+                        </ul>
+                        <button class="w-full py-4 rounded-xl bg-primary text-primary-foreground hover:opacity-90 transition-opacity font-heading font-bold text-xs uppercase tracking-widest shadow-xl">Start 14-Day Free Trial</button>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="bg-card border border-border rounded-2xl p-10 flex flex-col group hover:border-accent/50 transition-colors">
+                        <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest mb-2">For Global Scale</div>
+                        <h3 class="text-2xl font-heading font-bold mb-6">Enterprise</h3>
+                        <div class="flex items-baseline gap-1 mb-8">
+                            <span class="text-5xl font-heading font-extrabold" x-text="formatPrice(tiers.enterprise.base)"></span>
+                            <span class="text-muted-foreground text-sm">/mo</span>
+                        </div>
+                        <ul class="space-y-4 mb-10 flex-1">
+                            <li class="flex items-center gap-3 text-sm text-muted-foreground">
+                                <iconify-icon icon="lucide:check-circle" class="text-accent"></iconify-icon>
+                                Custom Task Limits
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-muted-foreground">
+                                <iconify-icon icon="lucide:check-circle" class="text-accent"></iconify-icon>
+                                On-Prem Deployment
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-muted-foreground">
+                                <iconify-icon icon="lucide:check-circle" class="text-accent"></iconify-icon>
+                                Dedicated Account Manager
+                            </li>
+                        </ul>
+                        <button class="w-full py-4 rounded-xl border border-border hover:bg-secondary transition-all font-heading font-bold text-xs uppercase tracking-widest">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-24 border-y border-border">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                <div class="space-y-2">
+                    <div class="text-4xl lg:text-5xl font-heading font-extrabold text-primary">99.99%</div>
+                    <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest">Global Uptime</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl lg:text-5xl font-heading font-extrabold text-accent">500K+</div>
+                    <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest">Automations Run</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl lg:text-5xl font-heading font-extrabold text-primary">120+</div>
+                    <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest">Countries Supported</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl lg:text-5xl font-heading font-extrabold text-accent">4M+</div>
+                    <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest">Daily API Calls</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <div class="text-primary font-heading font-bold text-xs tracking-widest uppercase">Testimonials</div>
+                <h2 class="text-4xl md:text-5xl font-heading font-extrabold">Trusted by <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Visionary Teams</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-card border border-border rounded-2xl p-8 space-y-6 hover:shadow-xl transition-shadow">
+                    <div class="flex gap-1">
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                    </div>
+                    <p class="text-muted-foreground leading-relaxed italic">"QuantumAI has completely redefined our data pipeline. What used to take weeks now happens in real-time with zero errors."</p>
+                    <div class="flex items-center gap-4 pt-4">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" class="w-12 h-12 rounded-full border border-border" alt="Alex Rivera">
+                        <div>
+                            <div class="font-heading font-bold text-sm">Alex Rivera</div>
+                            <div class="text-xs text-muted-foreground">CTO at TechFlow</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-card border border-border rounded-2xl p-8 space-y-6 hover:shadow-xl transition-shadow">
+                    <div class="flex gap-1">
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                    </div>
+                    <p class="text-muted-foreground leading-relaxed italic">"The AI agents are incredibly intuitive. We built a complex multi-step sync for 10,000+ users in just one afternoon."</p>
+                    <div class="flex items-center gap-4 pt-4">
+                        <img src="https://randomuser.me/api/portraits/women/2.jpg" class="w-12 h-12 rounded-full border border-border" alt="Sarah Chen">
+                        <div>
+                            <div class="font-heading font-bold text-sm">Sarah Chen</div>
+                            <div class="text-xs text-muted-foreground">Product Lead at ScaleUp</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card border border-border rounded-2xl p-8 space-y-6 hover:shadow-xl transition-shadow">
+                    <div class="flex gap-1">
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                        <iconify-icon icon="lucide:star" class="text-primary"></iconify-icon>
+                    </div>
+                    <p class="text-muted-foreground leading-relaxed italic">"The ROI was immediate. We saved over 2,000 hours of manual data entry in our first quarter using the platform."</p>
+                    <div class="flex items-center gap-4 pt-4">
+                        <img src="https://randomuser.me/api/portraits/men/3.jpg" class="w-12 h-12 rounded-full border border-border" alt="Marcus Thorne">
+                        <div>
+                            <div class="font-heading font-bold text-sm">Marcus Thorne</div>
+                            <div class="text-xs text-muted-foreground">Ops VP at GlobalLogistics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-24 px-6 max-w-4xl mx-auto" x-data="{ active: 1 }">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-4xl font-heading font-extrabold">Common Questions</h2>
+                <p class="text-muted-foreground">Everything you need to know about QuantumAI.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-card border border-border rounded-2xl overflow-hidden">
+                    <button class="w-full text-left p-6 flex justify-between items-center" @click="active = active === 1 ? null : 1">
+                        <span class="font-heading font-bold">How secure is my proprietary data?</span>
+                        <iconify-icon icon="lucide:plus" class="transition-transform duration-300" :class="active === 1 ? 'rotate-45' : ''"></iconify-icon>
+                    </button>
+                    <div class="px-6 pb-6 text-muted-foreground text-sm leading-relaxed" x-show="active === 1" x-collapse="">
+                        We use industry-standard AES-256 encryption for all data at rest and TLS 1.3 for data in transit. Your data is never used to train our base models unless you explicitly opt-in to a private fine-tuning instance.
+                    </div>
+                </div>
+                
+                <div class="bg-card border border-border rounded-2xl overflow-hidden">
+                    <button class="w-full text-left p-6 flex justify-between items-center" @click="active = active === 2 ? null : 2">
+                        <span class="font-heading font-bold">Do I need a technical background to use it?</span>
+                        <iconify-icon icon="lucide:plus" class="transition-transform duration-300" :class="active === 2 ? 'rotate-45' : ''"></iconify-icon>
+                    </button>
+                    <div class="px-6 pb-6 text-muted-foreground text-sm leading-relaxed" x-show="active === 2" x-collapse="">
+                        While our platform is powerful enough for senior engineers, our low-code visual builder allows product managers and operations leads to build complex agents with minimal coding knowledge.
+                    </div>
+                </div>
+
+                <div class="bg-card border border-border rounded-2xl overflow-hidden">
+                    <button class="w-full text-left p-6 flex justify-between items-center" @click="active = active === 3 ? null : 3">
+                        <span class="font-heading font-bold">Can I train agents on my specific data?</span>
+                        <iconify-icon icon="lucide:plus" class="transition-transform duration-300" :class="active === 3 ? 'rotate-45' : ''"></iconify-icon>
+                    </button>
+                    <div class="px-6 pb-6 text-muted-foreground text-sm leading-relaxed" x-show="active === 3" x-collapse="">
+                        Yes, you can upload PDFs, documentation, or connect directly to your database. Our RAG (Retrieval Augmented Generation) engine ensures agents always have the latest context from your specific knowledge base.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-24 px-6">
+            <div class="max-w-5xl mx-auto bg-gradient-to-br from-primary/10 via-background to-accent/10 border border-border rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,200,1,0.05),transparent)]"></div>
+                <div class="relative z-10 space-y-8">
+                    <div class="text-[10px] font-heading font-bold text-primary uppercase tracking-[0.3em]">Ready to begin?</div>
+                    <h2 class="text-4xl md:text-6xl font-heading font-extrabold leading-tight">The Future <br> is <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Autonomous</span></h2>
+                    <p class="text-muted-foreground max-w-xl mx-auto">Join 12,000+ companies already building the next generation of business. Start your 14-day free trial today.</p>
+                    <div class="flex flex-wrap justify-center gap-4 pt-4">
+                        <button class="px-10 py-5 rounded-xl bg-primary text-primary-foreground font-bold hover:shadow-[0_0_30px_rgba(255,200,1,0.4)] transition-all">Get Started Free</button>
+                        <button class="px-10 py-5 rounded-xl bg-card border border-border hover:bg-secondary transition-all font-bold">Book Strategy Call</button>
+                    </div>
+                    <p class="text-xs text-muted-foreground">No credit card required. Cancel anytime.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background border-t border-border pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-2 lg:col-span-1 space-y-6">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <iconify-icon icon="lucide:zap" class="text-primary-foreground text-xl"></iconify-icon>
+                    </div>
+                    <span class="font-heading font-bold text-xl tracking-tight">QuantumAI</span>
+                </div>
+                <p class="text-muted-foreground text-sm leading-relaxed">The intelligent layer for modern business. Built for scale, security, and world-class performance.</p>
+                <div class="space-y-4">
+                    <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest">Stay Updated</div>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Enter your email" class="bg-card border border-border rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-primary transition-colors">
+                        <button class="bg-foreground text-background px-4 py-2 rounded-lg text-xs font-bold hover:opacity-90 transition-opacity">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest">Platform</div>
+                <ul class="space-y-3 text-sm text-muted-foreground">
+                    <li><a href="#" class="hover:text-primary transition-colors">Features</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Integrations</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">API Docs</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Changelog</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Pricing</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-6">
+                <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest">Resources</div>
+                <ul class="space-y-3 text-sm text-muted-foreground">
+                    <li><a href="#" class="hover:text-primary transition-colors">Documentation</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Guides</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Community</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Support</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Status</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-6">
+                <div class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest">Company</div>
+                <ul class="space-y-3 text-sm text-muted-foreground">
+                    <li><a href="#" class="hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Security</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-xs text-muted-foreground">© 2024 QuantumAI Technologies Inc.</p>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-[10px] font-heading font-bold text-muted-foreground uppercase tracking-widest">Systems Operational</span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
